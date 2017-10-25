@@ -42,5 +42,22 @@ main(){
 
      // %ld => long int
      printf("Big number %ld\n\n", superBigNum); 
+
+     // %f => float and doubles. You can define the number of decimal places as well 
+     //Size goes from -3.4 *10^38 to 3.4 * 10^38
+     printf("Pi = %.5f\n\n", piValue); 
+     printf("Big Pi = %.20f\n\n", reallyBigPi); 
+     printf("My name is %s\n\n", "Yvon"); 
+
+     char myName[] = "Yvon N'Chonon";
+
+     strcpy(myName, "John Doe");
+
+     printf("My name is %s\n\n", myName); 
+
+     
+
+
+     
 }
 
