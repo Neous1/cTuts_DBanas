@@ -55,7 +55,41 @@ main(){
 
      printf("My name is %s\n\n", myName); 
 
-     
+     //scanf() is used to get input from the user 
+     //you must use the & ampersand before the variable unless you're using %s
+
+     char middleInitial;
+
+     printf ("What is your middle initial?\n");
+
+     // we're using c to because we want a character
+     scanf("%c", &middleInitial);
+
+     //You can only except more than one value if you
+     // define exactly what you expect to get
+
+     char firstName[30], lastName[30];
+
+     printf("What is you name?\n");
+
+     scanf("%s %s", firstName, lastName);
+
+     printf("Your name is %s %c %s\n\n", firstName, middleInitial, lastName);
+
+     //You can also except a / if you know the user will enter it 
+
+     int month, day, year;
+
+     printf("What's your birth date?");
+
+     scanf("%d/%d/%d", &month, &day, &year);
+
+     printf("Birth date %d/%d/%d\n\n", month, day, year);
+
+     //C programming Math
+     //+, -, *, /, and sometimes %(% onlywith ints)
+
+
 
 
      
