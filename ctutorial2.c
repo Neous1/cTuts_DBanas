@@ -60,6 +60,64 @@ int main(){
         printf("Bob doesn't get a raise \n\n");
     }
 
+    /*The conditional Operator is great for replacing simple if statements 
+    (comparison) ? happensIfTrue : happensIfFalse
+    Don't worrhy about char* for now 
+    */
 
+    char* legalAge = (custAge > 21) ? "true" : "false";
+    printf("Is the custgomer of legal age? %s\n\n", legalAge);
+
+    // You can change printf with a conditional operator directory 
+    int numOfProduct = 10; 
+
+    printf("I bought %s products\n\n", (numOfProduct>1)?"many":"one");
+
+    //How much space are data types taking up?
+
+    printf("A char takes up %d bytes\n\n", sizeof(char));
+    printf("an int takes up %d bytes\n\n", sizeof(int));
+    printf("A long int takes up %d bytes\n\n", sizeof(long int));printf("A float takes up %d bytes\n\n", sizeof(float));
+    printf("A double takes up %d bytes\n\n", sizeof(double));
+
+    /* What is a byte, bit etc?
+    A Bit is short for binary digit and can either be a 1 or 0
+    a Byte is generally considered to be 8 bits
+    */
+
+    int bigInt = 2147483648;
+
+    printf("I'm bigger then you may have heard %d\n\n", bigInt);
+    //calculate the maximum value based on bits
+
+    int numberHowBig = 0; 
+
+    printf("How Many Bits?");
+    scanf (" %d", &numberHowBig);
+    printf("\n\n");
+
+    /*
+    0: Print what was given
+    1: Print wast was given
+    2: 1 +2 = 3 (Binary: 11)
+    3: 3 +4 = 7 (binary: 111)
+    4: 7 +8 = 15 (binary: 1111)
+    */
+    //Initialize the incrementor before the while loop
+
+    int myIncrementor = 1, myMultiplier = 1, finalValue = 1;
+
+    while(myIncrementor < numberHowBig){
+        myMultiplier *=2;
+        finalValue = finalValue + myMultiplier;
+        //test to track and make sure it's 
+        
+        printf("finalValue: %d myMultiplier: %d myIncrementor: %d\n\n", finalValue, myMultiplier, myIncrementor);
+
+        //Don't forget to increment so the while loop ends 
+        //when the condition becomes false (Infinite loop Otherwise)
+
+        myIncrementor++;
+    }    
 
 }
