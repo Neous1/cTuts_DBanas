@@ -118,6 +118,62 @@ int main(){
         //when the condition becomes false (Infinite loop Otherwise)
 
         myIncrementor++;
-    }    
+    }
+    
+    //Handle if user enters 0 or 1
+
+    if ((numberHowBig == 0)|| (numberHowBig ==1)){
+        printf("Top Value: %d\n\n", numberHowBig); 
+    }else {
+        printf("Top Value: %d\n\n", finalValue);
+    }
+    int secretNumber= 10, numberGuessed = 0; 
+
+    //Infinite while loop
+
+    while(1){
+        printf("Guess My Secret Number: ");
+        scanf(" %d", &numberGuessed);
+
+        if(numberGuessed == 10){
+            printf("You Got It");
+            //break is used to throw you the  first line of code after the loop
+
+            break;
+        }
+    }
+    printf("\n\n");
+
+    //Your user a Do while loop when you need somethin done at least once, but don't knw the number of times you may need to loop
+
+    char sizeOfShirt;
+
+    do{
+        printf("What Size of shirt (S, M, L) :");
+        scanf("%c", &sizeOfShirt);
+    }
+    while(sizeOfShirt != 'S' && sizeOfShirt != 'M' && sizeOfShirt != 'L');
+    //When you know up front exactly how many times you need to loop then use a for loop for *define incrementor; define condition ; increment incrementor)
+
+    for (int counter = 0; counter <=20; counter++){
+        printf("%d", counter);
+    }
+
+    //If youuse the above code make sure you compile with gcc -std=c99 CTutorial2.c -0 CTutorial2
+    //Previous to C99 you had to initialize outside oif the for loop instead of useing int cournter = 0;
+    //To use c99 though main mus have a return type
+
+    printf("\n\n");
+
+    //Print only odd numbers
+
+    for (int counter = 0; counter <=40; counter++){
+        //continue is used to skip this iteration of the loop
+        //and instead continue with the next loop cycle
+
+        if((counter % 2 )== 0) continue;
+        printf("%d", counter);
+    }
+ 
 
 }
